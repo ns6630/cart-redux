@@ -4,6 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {AppState, ProductType} from "../state";
 import {addProduct, removeProduct} from "../state/cart/actions";
 import styled from "styled-components";
+import Button from "./Button";
 
 export interface ProductProps {
   name: ProductType;
@@ -18,9 +19,13 @@ export default function Product({name}: ProductProps) {
     <StyledProduct>
       <ProductName>{name}</ProductName>
       <ProductActions>
-        <AddIcon onClick={() => dispatch(addProduct(name))}/>
+        <Button onClick={() => dispatch(addProduct(name))}>
+          <AddIcon/>
+        </Button>
         <ProductCounter>{count}</ProductCounter>
-        <RemoveIcon onClick={() => dispatch(removeProduct(name))}/>
+        <Button onClick={() => dispatch(removeProduct(name))}>
+          <RemoveIcon/>
+        </Button>
       </ProductActions>
     </StyledProduct>
   )
@@ -41,11 +46,11 @@ const ProductActions = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   & > * {
     margin-right: 20px;
   }
-  
+
   & > *:last-child {
     margin-right: 0;
   }
