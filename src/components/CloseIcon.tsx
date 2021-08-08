@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import icon from "../img/delete.svg";
+import icon from "../img/close.svg";
 import Icon from "./Icon";
 
 const ClearIcon = styled(Icon).attrs({
   src: icon,
-  alt: "Clear",
+  alt: "Close",
 })``;
 
 export default ClearIcon;

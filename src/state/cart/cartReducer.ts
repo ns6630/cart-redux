@@ -1,7 +1,16 @@
-import {ADD_PRODUCT, AddProduct, CLEAR_CART, ClearCart, REMOVE_PRODUCT, RemoveProduct} from "./actions";
+import {
+  ADD_PRODUCT,
+  AddProduct,
+  CLEAR_CART,
+  ClearCart,
+  DELETE_PRODUCT,
+  DeleteProduct,
+  REMOVE_PRODUCT,
+  RemoveProduct
+} from "./actions";
 import {Cart} from "./types";
 
-export default function cartReducer(state: Cart = initCart(), action: AddProduct | RemoveProduct | ClearCart): Cart {
+export default function cartReducer(state: Cart = initCart(), action: AddProduct | RemoveProduct | DeleteProduct | ClearCart): Cart {
   switch (action.type) {
     case ADD_PRODUCT:
       return {
@@ -20,6 +29,15 @@ export default function cartReducer(state: Cart = initCart(), action: AddProduct
           [action.product]: state.products[action.product] ? state.products[action.product] - 1 : 0
         }
       }
+    case DELETE_PRODUCT:
+      const newState = {
+        ...state,
+        products: {
+          ...state.products
+        }
+      };
+      delete newState.products[action.product];
+      return newState;
     case CLEAR_CART:
       return {
         ...state,

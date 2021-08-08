@@ -2,4 +2,4 @@ export interface Cart {
   products: { [key: string]: ProductCount };
 }
 
-type ProductCount = number;
+export type ProductCount = number;

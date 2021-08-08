@@ -9,7 +9,7 @@ const Button = styled.button`
   justify-content: center;
   align-items: center;
   gap: 1em;
-  border-radius: 15px;
+  border-radius: 20px;
   outline: none;
   border: 1px solid #888888;
   box-shadow: 0 0 3px 0px rgba(0, 0, 0, .6);
