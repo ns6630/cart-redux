@@ -4,7 +4,8 @@ import {useDispatch, useSelector} from "react-redux";
 import {AppState, ProductType} from "../state";
 import {addProduct, removeProduct} from "../state/cart/actions";
 import styled from "styled-components";
-import Button from "./Button";
+import IconButton from "./IconButton";
+import ProductCounter from "./ProductCounter";
 
 export interface ProductProps {
   name: ProductType;
@@ -19,13 +20,13 @@ export default function Product({name}: ProductProps) {
     <StyledProduct>
       <ProductName>{name}</ProductName>
       <ProductActions>
-        <Button onClick={() => dispatch(addProduct(name))}>
+        <IconButton onClick={() => dispatch(addProduct(name))}>
           <AddIcon/>
-        </Button>
+        </IconButton>
         <ProductCounter>{count}</ProductCounter>
-        <Button onClick={() => dispatch(removeProduct(name))}>
+        <IconButton onClick={() => dispatch(removeProduct(name))}>
           <RemoveIcon/>
-        </Button>
+        </IconButton>
       </ProductActions>
     </StyledProduct>
   )
@@ -38,7 +39,7 @@ const ProductName = styled.div`
   height: 40px;
   line-height: 40px;
   text-align: center;
-  border-radius: 15px;
+  border-radius: 20px;
   margin-bottom: 20px;
 `;
 
@@ -54,16 +55,4 @@ const ProductActions = styled.div`
   & > *:last-child {
     margin-right: 0;
   }
-`;
-
-const ProductCounter = styled.div`
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  border-radius: 15px;
-  border: 1px solid #888888;
-  background: #eeeeee;
 `;

@@ -8,13 +8,14 @@ import ClearIcon from "./components/ClearIcon";
 import {useDispatch} from "react-redux";
 import {clearCart} from "./state/cart/actions";
 import Button from "./components/Button";
+import Cart from "./components/Cart";
 
 function App() {
   const dispatch = useDispatch();
 
   return (
     <div className="App">
-      <PageTitle>Список продуктов</PageTitle>
+      <PageTitle>Grocery list</PageTitle>
       <Products>
         <Product name={ProductType.Cucumber}/>
         <Product name={ProductType.Potato}/>
@@ -29,6 +30,8 @@ function App() {
           Clear
         </Button>
       </CartActions>
+
+      <Cart/>
     </div>
   );
 }
