@@ -22,11 +22,20 @@ export default function cartReducer(state: Cart = initCart(), action: AddProduct
         }
       }
     case REMOVE_PRODUCT:
-      return {
-        ...state,
-        products: {
-          ...state.products,
-          [action.product]: state.products[action.product] ? state.products[action.product] - 1 : 0
+      if (state.products[action.product]) {
+        return {
+          ...state,
+          products: {
+            ...state.products,
+            [action.product]: state.products[action.product] - 1
+          }
+        }
+      } else {
+        return {
+          ...state,
+          products: {
+            ...state.products,
+          }
         }
       }
     case DELETE_PRODUCT:
