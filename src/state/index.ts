@@ -9,9 +9,3 @@ export const rootReducer = combineReducers<AppState>({
 export interface AppState {
   cart: Cart;
 }
-
-export enum ProductType {
-  Cucumber = 'Cucumber',
-  Pumpkin = 'Pumpkin',
-  Potato = 'Potato',
-}

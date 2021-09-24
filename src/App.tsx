@@ -2,13 +2,13 @@ import React from 'react';
 import './App.css';
 import Products from "./components/Products";
 import Product from "./components/Product";
-import {ProductType} from "./state";
 import styled from "styled-components";
 import ClearIcon from "./components/icons/ClearIcon";
 import {useDispatch} from "react-redux";
 import {clearCart} from "./state/cart/actions";
 import Button from "./components/Button";
 import Cart from "./components/Cart";
+import {ProductType} from "./state/cart/types";
 
 function App() {
   const dispatch = useDispatch();

@@ -1,5 +1,5 @@
 import {useSelector} from "react-redux";
-import {AppState, ProductType} from "../state";
+import {AppState} from "../state";
 import {useMemo, useState} from "react";
 import Button from "./Button";
 import styled from "styled-components";
@@ -7,6 +7,7 @@ import CartIcon from "./icons/CartIcon";
 import CloseIcon from "./icons/CloseIcon";
 import CartItem from "./CartItem";
 import IconButton from "./IconButton";
+import {ProductType} from "../state/cart/types";
 
 export default function Cart() {
   const products = useSelector((state: AppState) => state.cart.products) || null;

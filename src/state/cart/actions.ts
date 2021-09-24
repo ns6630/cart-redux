@@ -1,4 +1,4 @@
-import {ProductType} from "../index";
+import {ProductType} from "./types";
 
 export function addProduct(product: ProductType) {
   return {

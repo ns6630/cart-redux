@@ -1,11 +1,12 @@
 import AddIcon from "./icons/AddIcon";
 import RemoveIcon from "./icons/RemoveIcon";
 import {useDispatch, useSelector} from "react-redux";
-import {AppState, ProductType} from "../state";
+import {AppState} from "../state";
 import {addProduct, removeProduct} from "../state/cart/actions";
 import styled from "styled-components";
 import IconButton from "./IconButton";
 import ProductCounter from "./ProductCounter";
+import {ProductType} from "../state/cart/types";
 
 export interface ProductProps {
   name: ProductType;

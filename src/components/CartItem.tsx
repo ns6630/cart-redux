@@ -1,4 +1,4 @@
-import {AppState, ProductType} from "../state";
+import {AppState} from "../state";
 import {useDispatch, useSelector} from "react-redux";
 import styled from "styled-components";
 import AddIcon from "./icons/AddIcon";
@@ -7,6 +7,7 @@ import RemoveIcon from "./icons/RemoveIcon";
 import {addProduct, deleteProduct, removeProduct} from "../state/cart/actions";
 import ProductCounter from "./ProductCounter";
 import ClearIcon from "./icons/ClearIcon";
+import {ProductType} from "../state/cart/types";
 
 export interface CartItemProps {
   name: ProductType;

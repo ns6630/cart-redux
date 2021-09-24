@@ -3,3 +3,9 @@ export interface Cart {
 }
 
 export type ProductCount = number;
+
+export enum ProductType {
+  Cucumber = 'Cucumber',
+  Pumpkin = 'Pumpkin',
+  Potato = 'Potato',
+}
