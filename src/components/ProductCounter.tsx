@@ -9,7 +9,6 @@ const ProductCounter = styled.div`
   align-content: center;
   border-radius: 20px;
   border: 1px solid #888888;
-  background: #eeeeee;
 `;
 
 export default ProductCounter;
