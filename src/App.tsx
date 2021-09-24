@@ -4,7 +4,7 @@ import Products from "./components/Products";
 import Product from "./components/Product";
 import {ProductType} from "./state";
 import styled from "styled-components";
-import ClearIcon from "./components/ClearIcon";
+import ClearIcon from "./components/icons/ClearIcon";
 import {useDispatch} from "react-redux";
 import {clearCart} from "./state/cart/actions";
 import Button from "./components/Button";

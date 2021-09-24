@@ -3,8 +3,8 @@ import {AppState, ProductType} from "../state";
 import {useMemo, useState} from "react";
 import Button from "./Button";
 import styled from "styled-components";
-import CartIcon from "./CartIcon";
-import CloseIcon from "./CloseIcon";
+import CartIcon from "./icons/CartIcon";
+import CloseIcon from "./icons/CloseIcon";
 import CartItem from "./CartItem";
 import IconButton from "./IconButton";
 

@@ -1,5 +1,5 @@
-import AddIcon from "./AddIcon";
-import RemoveIcon from "./RemoveIcon";
+import AddIcon from "./icons/AddIcon";
+import RemoveIcon from "./icons/RemoveIcon";
 import {useDispatch, useSelector} from "react-redux";
 import {AppState, ProductType} from "../state";
 import {addProduct, removeProduct} from "../state/cart/actions";

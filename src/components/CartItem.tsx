@@ -1,12 +1,12 @@
 import {AppState, ProductType} from "../state";
 import {useDispatch, useSelector} from "react-redux";
 import styled from "styled-components";
-import AddIcon from "./AddIcon";
+import AddIcon from "./icons/AddIcon";
 import IconButton from "./IconButton";
-import RemoveIcon from "./RemoveIcon";
+import RemoveIcon from "./icons/RemoveIcon";
 import {addProduct, deleteProduct, removeProduct} from "../state/cart/actions";
 import ProductCounter from "./ProductCounter";
-import ClearIcon from "./ClearIcon";
+import ClearIcon from "./icons/ClearIcon";
 
 export interface CartItemProps {
   name: ProductType;
